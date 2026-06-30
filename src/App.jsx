@@ -1,13 +1,12 @@
 import {useState} from 'react'
 import './App.css'
-import Header from './components/Header.jsx'
-import CharactersList, {CharacterItem} from './components/CharactersList.jsx'
-import CharactersDetails, {Messages} from './components/CharactersDetails.jsx'
+import Header from './components/Header'
+import CharactersList, {CharacterItem} from './components/CharactersList'
+import CharactersDetails, {Messages} from './components/CharactersDetails'
 import { Toaster } from 'react-hot-toast';
-import Modal from "./Components/Modal.jsx";
+import Modal from "./Components/Modal";
 import useCharacters from "./hooks/UseCharacters.js";
 import useLocalStorage from "./hooks/useLocalStorage.js";
-import Test from "./Components/Test.jsx";
 
 
 
@@ -39,7 +38,6 @@ function App() {
                       <CharactersDetails Detils={Detils} Characters={characters} episodes={episodes} setFavorites={setFavorites} favorites={favorites} />
               </section>
           </main>
-          <Test/>
       </div>
   )
 }
