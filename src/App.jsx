@@ -3,9 +3,8 @@ import './App.css'
 import Header from './components/Header'
 import CharactersList, {CharacterItem} from './components/CharactersList'
 import CharactersDetails, {Messages} from './components/CharactersDetails'
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import Modal from "./Components/Modal.jsx";
-import Input from "./Components/Test.jsx";
 import useCharacters from "./hooks/UseCharacters.js";
 import useLocalStorage from "./hooks/useLocalStorage.js";
 import Test from "./Components/Test.jsx";
@@ -16,7 +15,7 @@ function App() {
     const [name, setName] = useState('')
     const [Card , setCard] = useState('')
     const {characters , isFetching , Detils , episodes } = useCharacters(name , Card)
-    const [favorites ,setFavorites] = useLocalStorage('favorites')
+    const [favorites ,setFavorites] = useLocalStorage('favorites' , []) || []
     const [isClose, setIsClose] = useState(true);
 
 
@@ -26,7 +25,7 @@ function App() {
       <div className="App">
           <Modal isClose={isClose} setIsClose={setIsClose}>
               {
-                  favorites.length?favorites.map((item) => (<CharacterItem item={item} setCard={()=>{}} key={item.id} setFavorites={setFavorites} favorites={favorites}  />)):<Messages />
+                  favorites?.length?favorites.map((item) => (<CharacterItem item={item} setCard={()=>{}} key={item.id} setFavorites={setFavorites} favorites={favorites}  />)):<Messages />
 
               }
           </Modal>
