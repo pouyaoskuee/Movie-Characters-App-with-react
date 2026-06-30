@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import './App.css'
-import Header from './components/Header'
-import CharactersList, {CharacterItem} from './components/CharactersList'
-import CharactersDetails, {Messages} from './components/CharactersDetails'
+import Header from './components/Header.jsx'
+import CharactersList, {CharacterItem} from './components/CharactersList.jsx'
+import CharactersDetails, {Messages} from './components/CharactersDetails.jsx'
 import { Toaster } from 'react-hot-toast';
 import Modal from "./Components/Modal.jsx";
 import useCharacters from "./hooks/UseCharacters.js";
