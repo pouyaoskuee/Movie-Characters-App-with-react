@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
 import toast from "react-hot-toast";
-import axios from 'axios'
+import axios from "axios";
 
 
 export default function useCharacters ( name , Card) {
+
 
     const [characters, setCharacters] = useState([])
     const [isFetching, setIsFetching] = useState(false)
