@@ -4,7 +4,7 @@ import Header from './components/Header'
 import CharactersList, {CharacterItem} from './components/CharactersList'
 import CharactersDetails, {Messages} from './components/CharactersDetails'
 import { Toaster } from 'react-hot-toast';
-import Modal from "./Components/Modal";
+import Modal from "./components/Modal";
 import useCharacters from "./hooks/UseCharacters.js";
 import useLocalStorage from "./hooks/useLocalStorage.js";
 
